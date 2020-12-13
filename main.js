@@ -25,7 +25,7 @@ $(document).ready(function () {
             status.append('<div>Subject is NOT valid</div>')
         }
 
-        if (message.lenght > 20) {
+        if (message.length > 20) {
             status.append('<div>Message is Valid</div>')
         } else {
             status.append('<div>Message is NOT Valid</div>')
