@@ -2,7 +2,6 @@ console.log('this is working')
 
 $(document).ready(function () {
     $('.submit').click(function (e) {
-        e.preventDefault();
         console.log('this button has just been clicked!!!')
 
         //we need to get the individual input values and set to a variable
@@ -16,18 +15,21 @@ $(document).ready(function () {
         if (email.length > 5 && email.includes('@') && email.includes('.')) {
             status.append('<div>email is valid</div>')
         } else {
+            e.preventDefault();
             status.append('<div>email is NOT valid</div>')
         }
 
         if (subject.length >= 2) {
             status.append('<div>Subject is valid</div>')
         } else {
+            e.preventDefault();
             status.append('<div>Subject is NOT valid</div>')
         }
 
         if (message.length >= 10) {
             status.append('<div>Message is Valid</div>')
         } else {
+            e.preventDefault();
             status.append('<div>Message is NOT Valid</div>')
         }
     })
