@@ -19,13 +19,13 @@ $(document).ready(function () {
             status.append('<div>email is NOT valid</div>')
         }
 
-        if (subject.length > 2) {
+        if (subject.length >= 2) {
             status.append('<div>Subject is valid</div>')
         } else {
             status.append('<div>Subject is NOT valid</div>')
         }
 
-        if (message.length > 20) {
+        if (message.length >= 10) {
             status.append('<div>Message is Valid</div>')
         } else {
             status.append('<div>Message is NOT Valid</div>')
